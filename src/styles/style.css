@@ -1,0 +1,15 @@
+.brush{
+    display: flex;
+    cursor:pointer;
+    height:30px;
+    width:30px;
+    background-color: #f0f4f7;
+    border-radius: 4px;
+    border: 1px solid #ced2d6;
+}
+
+.brush img{
+    height:100%;
+    width:100%;
+    border-radius: 4px;
+}
