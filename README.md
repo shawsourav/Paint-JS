@@ -1,7 +1,7 @@
 # Paint JS
 Simulating MS Paint through Vanilla JS
 
-It supports older browsers since the code is transpiled to ES5 using Babel.
+The project implements Paint Tool for drawing sketches on canvas. Since, the whole project is build using vanilla JS there is no framework overhead. It supports older browsers since the code is transpiled to ES5 using Babel.
 
 Available tool
 1. Brush tool
