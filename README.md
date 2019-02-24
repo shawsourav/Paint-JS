@@ -1,4 +1,4 @@
-# paint-js
+# Paint JS
 Simulating MS Paint through Vanilla JS
 
 It supports older browsers since the code is transpiled to ES5 using Babel.
@@ -8,3 +8,4 @@ Available tool
 
 In progress
 1. Support for saving image drawn on Canvas
+2. Colour Palette for picking different foreground colour
