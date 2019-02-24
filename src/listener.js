@@ -2,7 +2,7 @@ import CanvasBoard from "./CanvasBoard";
 
 export function initCanvas(){
     console.log("--init canvas");
-    let canvas = document.querySelector("#canvas");
+    let canvas = document.querySelector("#draw");
     new CanvasBoard(canvas);
 }
 

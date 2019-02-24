@@ -11,8 +11,6 @@ class CanvasBoard {
         this.ctx.lineJoin = 'round';
         this.ctx.lineCap = 'round';
         this.ctx.lineWidth = 10;
-        this.ctx.fillStyle = 'rgb(200, 0, 0)';
-        this.ctx.fillRect(10, 10, 50, 50);
         this.selectedTool = null;
         this.isDrawing = false;
         this.lastX = 0;
@@ -34,10 +32,10 @@ class CanvasBoard {
     }
 
     listenerForCanvas(){
-        canvas.addEventListener('mousemove', this.drawIntoCanvas); 
-        canvas.addEventListener('mouseup', () => this.isDrawing = false);
-        canvas.addEventListener('mouseout', () => this.isDrawing = false);
-        canvas.addEventListener('mousedown', (e) => {
+        this.canvas.addEventListener('mousemove', this.drawIntoCanvas); 
+        this.canvas.addEventListener('mouseup', () => this.isDrawing = false);
+        this.canvas.addEventListener('mouseout', () => this.isDrawing = false);
+        this.canvas.addEventListener('mousedown', (e) => {
             this.isDrawing = true;
             [this.lastX, this.lastY] = [e.offsetX, e.offsetY];
             console.log('this.isDrawing',this.isDrawing);
