@@ -1,10 +1,12 @@
 import BrushIcon from './brush.jpg';
+import { eventBus } from "../listener";
 export default class Brush{
     constructor(){
         this.isSelected = false;
     }
 
     initBrush(){
+        console.log('-evntBus', eventBus);
         this.brushEl = document.createElement("div");
         this.brushEl.classList.add("brush");
 
@@ -20,7 +22,9 @@ export default class Brush{
     }
 
     toggleSelected(){
+        eventBus.publish('tool_selected', 'brush', 'active');
         this.isSelected = !this.isSelected;
         console.log(this.isSelected);
+        this.isSelected ? this.classList.add("selected") : this.classList.remove("selected");
     }
 };

@@ -7,11 +7,17 @@ class Palette{
     }
 
     initPalette(){
-        
+        this.createPalette();
         let brush = new Brush();
         let brushElement = brush.initBrush();
+        this.palette.appendChild(brushElement);
+        document.body.appendChild(this.palette);
+    }
 
-        document.body.appendChild(brushElement);
+    createPalette(){
+        this.palette = document.createElement("div");
+        this.palette.classList.add("palette");
+
     }
 
 }
