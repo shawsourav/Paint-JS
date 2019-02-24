@@ -1,6 +1,6 @@
 import Brush from "./PaintTools/Brush";
 import Eraser from "./PaintTools/Eraser";
-class Palette{
+class ToolPalette{
     constructor(){
       this.selectedTool = null;
       this.initPalette();
@@ -26,4 +26,4 @@ class Palette{
 
 }
 
-export default Palette;
+export default ToolPalette;

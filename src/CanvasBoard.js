@@ -1,4 +1,4 @@
-import Palette from "./Palette";
+import ToolPalette from "./ToolPalette";
 import { eventBus } from "./listener";
 
 class CanvasBoard {
@@ -10,7 +10,7 @@ class CanvasBoard {
         this.toggleToolSelected = this.toggleToolSelected.bind(this);
         this.initialSetUpForCanvas = this.initialSetUpForCanvas.bind(this);
 
-        this.palette = new Palette();
+        this.palette = new ToolPalette();
 
         eventBus.subscribe('tool_selected', this.toggleToolSelected);
         this.initialSetUpForCanvas(); //Initial set up for canvas
