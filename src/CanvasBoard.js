@@ -56,6 +56,8 @@ class CanvasBoard {
         let mouseX = e.clientX - rect.left - root.scrollLeft;
         let mouseY = e.clientY - rect.top - root.scrollTop;
         this.ctx.beginPath();
+        this.ctx.globalCompositeOperation = this.selectedTool == 'eraser' ? "destination-out" : "source-over";
+        this.ctx.strokeStyle = this.selectedTool == 'eraser' ? "#fff" : "#BADA55";
         this.ctx.moveTo(this.lastX, this.lastY);
         this.ctx.lineTo(mouseX, mouseY);
         this.ctx.stroke();

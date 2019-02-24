@@ -1,5 +1,5 @@
 import Brush from "./PaintTools/Brush";
-
+import Eraser from "./PaintTools/Eraser";
 class Palette{
     constructor(){
       this.selectedTool = null;
@@ -7,17 +7,21 @@ class Palette{
     }
 
     initPalette(){
-        this.createPalette();
+        this.palette = document.createElement("div");
+        this.palette.classList.add("palette");
+        this.addPalettetools();
+    }
+
+    addPalettetools(){
         let brush = new Brush();
         let brushElement = brush.initBrush();
         this.palette.appendChild(brushElement);
-        document.body.appendChild(this.palette);
-    }
+        
+        let eraser = new Eraser();
+        let eraserElement = eraser.initEraser();
+        this.palette.appendChild(eraserElement);
 
-    createPalette(){
-        this.palette = document.createElement("div");
-        this.palette.classList.add("palette");
-
+        document.body.appendChild(this.palette); 
     }
 
 }

@@ -8,7 +8,7 @@ export default class Brush{
     initBrush(){
         console.log('-evntBus', eventBus);
         this.brushEl = document.createElement("div");
-        this.brushEl.classList.add("brush");
+        this.brushEl.classList.add("paint_tool");
 
         let img = document.createElement("img");
         img.setAttribute("src", BrushIcon);
@@ -22,7 +22,7 @@ export default class Brush{
     }
 
     toggleSelected(){
-        eventBus.publish('tool_selected', 'brush', 'active');
+        eventBus.publish('tool_selected', 'brush', 'source-over');
         this.isSelected = !this.isSelected;
         console.log(this.isSelected);
         this.isSelected ? this.classList.add("selected") : this.classList.remove("selected");
